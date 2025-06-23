@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+        }
+        h1 {
+            font-size: 2em;
+            color: navy;
+        }
+        form {
+            max-width: 400px;
+            margin-top: 1.5em;
+        }
+        .form-group {
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.3em;
+        }
+        input[type=number] {
+            width: 100%;
+            padding: 0.4em;
+            box-sizing: border-box;
+        }
+        .button-group {
+            margin-top: 1em;
+        }
+        .button-group button {
+            margin-right: 0.5em;
+            padding: 0.5em 1em;
+        }
+        .result {
+            margin-top: 2em;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<h1 th:text="${companyName}">Company Name</h1>
+
+<form th:action="@{/calculate}" method="post">
+    <div class="form-group">
+        <label for="number1">Number 1:</label>
+        <input type="number" id="number1" step="any" name="number1" required />
+    </div>
+    <div class="form-group">
+        <label for="number2">Number 2:</label>
+        <input type="number" id="number2" step="any" name="number2" required />
+    </div>
+    <div class="button-group">
+        <button type="submit" name="operation" value="add">Add</button>
+        <button type="submit" name="operation" value="subtract">Subtract</button>
+        <button type="submit" name="operation" value="multiply">Multiply</button>
+        <button type="submit" name="operation" value="divide">Divide</button>
+    </div>
+</form>
+
+<div class="result" th:if="${result != null}">
+    <label th:text="'Result of ' + ${operationLabel} + ':'"></label>
+    <div id="calc-result"><span th:text="${result}">[Result]</span></div>
+</div>
+</body>
+</html>
+

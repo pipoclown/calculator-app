@@ -1,0 +1,9 @@
+services:
+  calculator-blue:
+    image: calculator-app
+    build: .
+    ports:
+      - "8083:8080"
+    environment:
+      - COMPANY_NAME=Blue Company
+
