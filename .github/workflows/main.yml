@@ -41,10 +41,14 @@ jobs:
       - name: Start Spring Boot App in Background
         run: nohup java -jar target/calculator-app.jar > log.txt 2>&1 &
 
-             sleep 5
+             until curl --output /dev/null --silent --head --fail http://localhost:8080; do
+                echo "Waiting for app to start..."
+                sleep 2
+             done
+
              
       - name: Run Headless Selenium Tests
-        run: mvn test
+        run:  mvn surefire-report:report
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
