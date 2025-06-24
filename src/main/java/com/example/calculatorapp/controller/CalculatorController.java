@@ -25,7 +25,7 @@ public class CalculatorController {
 			@RequestParam("number2") double number2,
 			@RequestParam("operation") String operation,
 			Model model) {
-
+// Comment
 		double result = switch (operation) {
 			case "add" -> number1 + number2;
 			case "subtract" -> number1 - number2;
