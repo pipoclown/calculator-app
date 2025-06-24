@@ -1,6 +1,6 @@
 services:
   calculator-blue:
-    image: calculator-app
+    image: spiraltraindocker/calculator-app
     build: .
     ports:
       - "8083:8080"

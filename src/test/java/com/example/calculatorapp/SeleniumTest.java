@@ -85,11 +85,11 @@ public class SeleniumTest {
         performTest("10", "4", "subtract", "6");
     }
 
-   // @Test
-   // @Order(3)
-   // public void testMultiplication() {
-   //     performTest("3", "7", "multiply", "21");
-   // }
+   @Test
+   @Order(3)
+   public void testMultiplication() {
+        performTest("3", "7", "multiply", "21");
+   }
 
    // @Test
    // @Order(4)
