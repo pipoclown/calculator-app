@@ -75,7 +75,7 @@ public class SeleniumTest {
     @Test
     @Order(1)
     public void testAddition() {
-        performTest("10", "5", "add", "15");
+        performTest("11", "5", "add", "16");
     }
 
    // @Test
