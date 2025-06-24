@@ -36,13 +36,13 @@ public class SeleniumTest {
 
         WebDriverManager.chromedriver().setup();
 		
-		//ChromeOptions options = new ChromeOptions();
-		//options.addArguments("--headless=new"); // use "--headless" if "new" causes issues
-		//options.addArguments("--no-sandbox");
-		//options.addArguments("--disable-dev-shm-usage");
-		//driver = new ChromeDriver(options);
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new"); // use "--headless" if "new" causes issues
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		driver = new ChromeDriver(options);
 
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
     }
 
     private void performTest(String num1, String num2, String operation, String expected) {
@@ -78,11 +78,11 @@ public class SeleniumTest {
         performTest("10", "5", "add", "15");
     }
 
-   // @Test
-   // @Order(2)
-   // public void testSubtraction() {
-   //     performTest("10", "4", "subtract", "6");
-   // }
+    @Test
+    @Order(2)
+    public void testSubtraction() {
+        performTest("10", "4", "subtract", "6");
+    }
 
    // @Test
    // @Order(3)

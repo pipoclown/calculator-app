@@ -28,7 +28,7 @@ public class CalculatorController {
 
 		double result = switch (operation) {
 			case "add" -> number1 + number2;
-			//case "subtract" -> number1 - number2;
+			case "subtract" -> number1 - number2;
 			//case "multiply" -> number1 * number2;
 			//case "divide" -> number2 != 0 ? number1 / number2 : Double.NaN;
 			default -> 0;
@@ -36,7 +36,7 @@ public class CalculatorController {
 
 		String label = switch (operation) {
 			case "add" -> "Add";
-			//case "subtract" -> "Subtract";
+			case "subtract" -> "Subtract";
 			//case "multiply" -> "Multiply";
 			//case "divide" -> "Divide";
 			default -> "Unknown";
