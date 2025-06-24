@@ -56,7 +56,11 @@
     </dependencies>
 
 	<build>
+<<<<<<< HEAD
 	    <finalName>calculator-app</finalName>
+=======
+		<finalName>calculator-app</finalName>
+>>>>>>> fc0ffa966536df4e1b8a97fd51e4dd8200852a26
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
