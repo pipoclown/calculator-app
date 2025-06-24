@@ -36,7 +36,6 @@ public class SeleniumTest {
 
         WebDriverManager.chromedriver().setup();
 		
-<<<<<<< HEAD
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless=new"); // use "--headless" if "new" causes issues
 		options.addArguments("--no-sandbox");
@@ -44,15 +43,7 @@ public class SeleniumTest {
 		driver = new ChromeDriver(options);
 
         //driver = new ChromeDriver();
-=======
-        ChromeOptions options = new ChromeOptions();
-	options.addArguments("--headless=new"); // use "--headless" if "new" causes issues
-        options.addArguments("--no-sandbox");
-	options.addArguments("--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
 
-       // driver = new ChromeDriver();
->>>>>>> fc0ffa966536df4e1b8a97fd51e4dd8200852a26
     }
 
     private void performTest(String num1, String num2, String operation, String expected) {
